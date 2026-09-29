@@ -25,6 +25,11 @@
   ],
   "author": "Robin Sehnalik",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinsehnalik/componentlibrary.git"
+  },
+  "homepage": "https://github.com/robinsehnalik/componentlibrary#readme",
   "devDependencies": {
     "@types/node": "^26.6.3",
     "autoprefixer": "^10.4.20",

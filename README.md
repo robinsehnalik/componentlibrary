@@ -52,7 +52,7 @@ Modern frontend development often defaults to bloated component libraries wrappe
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/your-username/componentlibrary.git
+git clone https://github.com/robinsehnalik/componentlibrary.git
 cd componentlibrary
 
 # Using pnpm (recommended)
