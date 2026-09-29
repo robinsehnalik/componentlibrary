@@ -1,0 +1,26 @@
+<div class="w-full max-w-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-4 text-left font-mono select-none text-xs space-y-1" id="tv1-root">
+              <div class="text-[9px] uppercase tracking-widest text-muted border-b border-[color:var(--color-border)] pb-2 mb-2 flex justify-between items-center">
+                <span>Project Explorer</span>
+                <span class="text-emerald-600 dark:text-emerald-400" id="tv1-status">src/components/TreeView.astro</span>
+              </div>
+              <div class="tv-folder cursor-pointer flex items-center gap-2 py-1 text-ink dark:text-white font-bold" data-target="src">
+                <span class="tv-arrow text-muted">▼</span> 📁 src/
+              </div>
+              <div class="pl-4 space-y-1" id="tv-src">
+                <div class="tv-folder cursor-pointer flex items-center gap-2 py-0.5 text-muted hover:text-ink dark:hover:text-white font-bold" data-target="components">
+                  <span class="tv-arrow">▼</span> 📁 components/
+                </div>
+                <div class="pl-4 space-y-1 text-muted" id="tv-components">
+                  <div class="tv-file py-0.5 hover:text-ink dark:hover:text-white cursor-pointer" data-file="src/components/Header.astro">📄 Header.astro</div>
+                  <div class="tv-file py-0.5 hover:text-ink dark:hover:text-white cursor-pointer" data-file="src/components/Showcase.astro">📄 Showcase.astro</div>
+                  <div class="tv-file py-0.5 text-ink dark:text-white font-bold cursor-pointer" data-file="src/components/TreeView.astro">📄 TreeView.astro ★</div>
+                </div>
+                <div class="tv-folder cursor-pointer flex items-center gap-2 py-0.5 text-muted hover:text-ink dark:hover:text-white font-bold" data-target="pages">
+                  <span class="tv-arrow">▶</span> 📁 pages/
+                </div>
+                <div class="pl-4 space-y-1 text-muted hidden" id="tv-pages">
+                  <div class="tv-file py-0.5 hover:text-ink dark:hover:text-white cursor-pointer" data-file="src/pages/index.astro">📄 index.astro</div>
+                  <div class="tv-file py-0.5 hover:text-ink dark:hover:text-white cursor-pointer" data-file="src/pages/projects.astro">📄 projects.astro</div>
+                </div>
+              </div>
+            </div>

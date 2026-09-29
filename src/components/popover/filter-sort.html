@@ -1,0 +1,17 @@
+<div class="w-full max-w-xs border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-4 text-left font-mono select-none text-xs space-y-3">
+              <div class="flex justify-between text-[9px] uppercase tracking-widest text-muted">
+                <span>Sort Criteria</span>
+                <span id="sort-active" class="font-bold text-ink dark:text-white">Date (Newest)</span>
+              </div>
+              <div class="space-y-1.5 text-[11px]" id="sort-options">
+                <label class="flex items-center gap-2 cursor-pointer font-bold text-ink dark:text-white">
+                  <input type="radio" name="sort" value="Date (Newest)" checked class="accent-black dark:accent-white cursor-pointer" /> Date (Newest first)
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer text-muted hover:text-ink dark:hover:text-white">
+                  <input type="radio" name="sort" value="Complexity (Low)" class="accent-black dark:accent-white cursor-pointer" /> Complexity (Low to High)
+                </label>
+                <label class="flex items-center gap-2 cursor-pointer text-muted hover:text-ink dark:hover:text-white">
+                  <input type="radio" name="sort" value="Popularity (High)" class="accent-black dark:accent-white cursor-pointer" /> Popularity (Most Used)
+                </label>
+              </div>
+            </div>

@@ -1,0 +1,23 @@
+<div class="w-full max-w-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-4 text-left font-mono select-none text-xs space-y-2">
+              <div class="text-[9px] uppercase tracking-widest text-muted border-b border-[color:var(--color-border)] pb-2">PostgreSQL Tables (Click to toggle)</div>
+              <div>
+                <div class="db-table font-bold text-ink dark:text-white cursor-pointer flex items-center gap-1.5" data-table="users">
+                  <span class="db-arrow">▼</span> 🗄️ users (3 columns)
+                </div>
+                <div class="pl-5 text-muted space-y-0.5 text-[11px]" id="db-users">
+                  <div>🔑 id <span class="text-[9px] opacity-60">(UUID, PK)</span></div>
+                  <div>🏷️ email <span class="text-[9px] opacity-60">(VARCHAR, UNIQUE)</span></div>
+                  <div>🕒 created_at <span class="text-[9px] opacity-60">(TIMESTAMPTZ)</span></div>
+                </div>
+              </div>
+              <div>
+                <div class="db-table font-bold text-muted hover:text-ink dark:hover:text-white cursor-pointer flex items-center gap-1.5" data-table="audit">
+                  <span class="db-arrow">▶</span> 🗄️ audit_logs (4 columns)
+                </div>
+                <div class="pl-5 text-muted space-y-0.5 text-[11px] hidden" id="db-audit">
+                  <div>🔑 log_id <span class="text-[9px] opacity-60">(BIGINT, PK)</span></div>
+                  <div>👤 user_id <span class="text-[9px] opacity-60">(UUID, FK)</span></div>
+                  <div>⚡ action <span class="text-[9px] opacity-60">(TEXT)</span></div>
+                </div>
+              </div>
+            </div>

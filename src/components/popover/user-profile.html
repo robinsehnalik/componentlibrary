@@ -1,0 +1,22 @@
+<div class="relative inline-block text-left font-mono" id="pop1-root">
+              <button id="pop1-btn" class="px-4 py-2.5 border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] text-xs font-bold text-ink dark:text-white hover:bg-black/5 dark:hover:bg-white/10 flex items-center gap-2 cursor-pointer shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>alex.rivera</span>
+                <span class="text-[9px] text-muted">▼</span>
+              </button>
+              <div id="pop1-panel" class="absolute left-0 mt-2 w-64 border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] shadow-2xl p-4 text-xs space-y-3 z-30 hidden">
+                <div class="border-b border-[color:var(--color-border)] pb-2">
+                  <div class="font-bold text-ink dark:text-white">Alex Rivera</div>
+                  <div class="text-[10px] text-muted">lead.architect@enterprise.io</div>
+                </div>
+                <div class="space-y-1.5 text-muted text-[11px]" id="pop1-menu-items">
+                  <button class="w-full text-left py-1 hover:text-ink dark:hover:text-white cursor-pointer flex justify-between"><span>Profile Settings</span> <span class="text-[9px] opacity-60">⌘,</span></button>
+                  <button class="w-full text-left py-1 hover:text-ink dark:hover:text-white cursor-pointer flex justify-between"><span>API Access Tokens</span> <span class="text-[9px] opacity-60">2 Active</span></button>
+                  <button class="w-full text-left py-1 hover:text-ink dark:hover:text-white cursor-pointer flex justify-between"><span>Audit Log</span> <span class="text-[9px] opacity-60">100% OK</span></button>
+                </div>
+                <div class="border-t border-[color:var(--color-border)] pt-2 flex justify-between items-center" id="pop1-footer">
+                  <button id="pop1-signout" class="text-[10px] text-red-500 hover:underline cursor-pointer font-bold">Sign out</button>
+                  <span id="pop1-status" class="text-[9px] text-muted">Session: Active</span>
+                </div>
+              </div>
+            </div>

@@ -1,0 +1,39 @@
+<div class="w-full max-w-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-5 text-left font-mono select-none text-xs space-y-3" id="scorecard-root">
+              <div class="text-[9px] uppercase tracking-widest text-muted border-b border-[color:var(--color-border)] pb-2 flex justify-between items-center">
+                <span>Interactive Scorecard (Click to adjust)</span>
+                <span class="font-bold text-ink dark:text-white" id="sc-overall">OVERALL: 4.9 / 5.0</span>
+              </div>
+              <div class="space-y-2" id="sc-categories">
+                <div class="flex justify-between items-center p-1.5 border border-transparent hover:border-[color:var(--color-border)] transition-all">
+                  <span class="font-bold text-ink dark:text-white">Code Cleanliness</span>
+                  <div class="flex items-center gap-2">
+                    <div class="flex gap-1 text-amber-400 cursor-pointer sc-stars" data-cat="code" data-score="5">
+                      <span data-s="1">★</span><span data-s="2">★</span><span data-s="3">★</span><span data-s="4">★</span><span data-s="5">★</span>
+                    </div>
+                    <span class="font-bold text-ink dark:text-white w-7 text-right sc-val">5.0</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center p-1.5 border border-transparent hover:border-[color:var(--color-border)] transition-all">
+                  <span class="font-bold text-ink dark:text-white">Page Speed (LCP)</span>
+                  <div class="flex items-center gap-2">
+                    <div class="flex gap-1 text-amber-400 cursor-pointer sc-stars" data-cat="speed" data-score="5">
+                      <span data-s="1">★</span><span data-s="2">★</span><span data-s="3">★</span><span data-s="4">★</span><span data-s="5">★</span>
+                    </div>
+                    <span class="font-bold text-ink dark:text-white w-7 text-right sc-val">5.0</span>
+                  </div>
+                </div>
+                <div class="flex justify-between items-center p-1.5 border border-transparent hover:border-[color:var(--color-border)] transition-all">
+                  <span class="font-bold text-ink dark:text-white">Accessibility (WCAG)</span>
+                  <div class="flex items-center gap-2">
+                    <div class="flex gap-1 text-amber-400 cursor-pointer sc-stars" data-cat="a11y" data-score="4">
+                      <span data-s="1">★</span><span data-s="2">★</span><span data-s="3">★</span><span data-s="4">★</span><span data-s="5" class="text-zinc-300 dark:text-zinc-700">★</span>
+                    </div>
+                    <span class="font-bold text-ink dark:text-white w-7 text-right sc-val">4.0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="text-[9px] text-muted border-t border-[color:var(--color-border)] pt-2 flex justify-between">
+                <span>Weighted Arithmetic Mean</span>
+                <span class="text-emerald-500 font-bold" id="sc-status">Optimal Architecture</span>
+              </div>
+            </div>

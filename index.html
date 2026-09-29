@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Component Library — Copy-Paste Semantic Tailwind & Vanilla JS</title>
+    <meta
+      name="description"
+      content="Zero-dependency, copy-paste UI component collection built with Semantic HTML, Tailwind CSS, and minimal vanilla JavaScript."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body class="min-h-screen bg-paper text-ink selection:bg-zinc-800 selection:text-white dark:selection:bg-zinc-200 dark:selection:text-black">
+    
+    <!-- Top Navigation Header -->
+    <header class="border-b border-border bg-paper/80 backdrop-blur-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-6 h-6 bg-ink text-paper dark:bg-white dark:text-black flex items-center justify-center font-mono font-bold text-xs">
+            UI
+          </div>
+          <span class="font-bold text-sm tracking-tight">ComponentLibrary</span>
+          <span class="px-2 py-0.5 text-[10px] font-mono font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 rounded-none">
+            v1.0.0
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-4 text-xs font-mono">
+          <div class="hidden md:flex items-center gap-1 text-muted text-[11px]">
+            <span>8 Categories</span>
+            <span>·</span>
+            <span>80 Components</span>
+            <span>·</span>
+            <span class="text-emerald-500 font-bold">Zero Dependencies</span>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button
+            type="button"
+            id="cl-theme-toggle"
+            class="p-1.5 text-muted hover:text-ink dark:hover:text-white border border-border hover:border-ink dark:hover:border-white transition-colors cursor-pointer"
+            aria-label="Toggle Theme"
+            title="Toggle Light / Dark Mode"
+          >
+            <span id="theme-icon" class="text-xs">☀️</span>
+          </button>
+
+          <!-- GitHub Link -->
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-2.5 py-1 text-[11px] font-bold border border-border hover:border-ink dark:hover:border-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors flex items-center gap-1.5"
+          >
+            <span>GitHub</span>
+            <span class="text-[10px]">↗</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6">
+      
+      <!-- Showcase Window Mockup Container -->
+      <div
+        class="component-library-root window-mockup border border-border bg-surface dark:bg-[#0c0c0e] shadow-2xl flex flex-col w-full min-h-[760px] text-ink font-sans"
+        id="storybook-container"
+      >
+        <!-- Window Top Bar -->
+        <div class="flex items-center justify-between border-b border-border px-4 py-3 bg-zinc-50 dark:bg-black/40 select-none">
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-400 dark:bg-red-500/80"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-amber-400 dark:bg-amber-500/80"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 dark:bg-emerald-500/80"></span>
+          </div>
+          <div class="text-[10px] text-muted font-mono tracking-widest uppercase">
+            ui.showcase.dev · 8 categories · 80 interactive components
+          </div>
+          <div class="flex items-center gap-1.5 text-[10px] font-mono text-emerald-600 dark:text-emerald-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>LIVE INTERACTIVE</span>
+          </div>
+        </div>
+
+        <!-- Category Selection Bar (Top 8 Tabs) -->
+        <div
+          class="border-b border-border bg-zinc-100/50 dark:bg-black/30 px-3 py-2 overflow-x-auto no-scrollbar flex items-center gap-1.5 select-none"
+          id="cl-category-bar"
+        >
+          <!-- Injected via TypeScript -->
+        </div>
+
+        <!-- Category Info Sub-banner -->
+        <div class="border-b border-border px-5 py-3 bg-surface dark:bg-[#09090b] flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+          <div class="flex items-center gap-3">
+            <span class="font-bold text-ink uppercase tracking-widest text-[11px]" id="cl-current-category-name">
+              Carousel
+            </span>
+            <span class="text-[10px] text-muted" id="cl-current-category-desc">
+              — Content slider components
+            </span>
+          </div>
+          <div class="text-[10px] text-muted hidden sm:flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-purple-500 rounded-full"></span>
+            <span>Zero-Framework Vanilla TypeScript & Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Main Body: Sidebar + Interactive Canvas -->
+        <div class="flex-1 grid grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-border min-h-[600px]">
+          
+          <!-- Left Sidebar: Component Variants List -->
+          <div class="col-span-12 md:col-span-4 flex flex-col h-[300px] md:h-[620px] bg-zinc-50/60 dark:bg-black/40 select-none">
+            <!-- Search Input -->
+            <div class="p-3 border-b border-border space-y-2">
+              <div class="flex items-center justify-between text-[10px] font-mono text-muted uppercase tracking-widest font-bold">
+                <span>Components</span>
+                <span id="cl-variant-count" class="text-muted/70">(10 variants)</span>
+              </div>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="cl-search-input"
+                  placeholder="Search components or variants..."
+                  class="w-full bg-paper dark:bg-black/60 border border-border text-[11px] text-ink px-3 py-1.5 font-mono focus:border-zinc-500 outline-none placeholder:text-muted rounded-none transition-colors"
+                  autocomplete="off"
+                />
+                <button
+                  type="button"
+                  id="cl-clear-search"
+                  class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] text-muted hover:text-ink font-mono"
+                  title="Clear search"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+
+            <!-- Scrollable Component Buttons List -->
+            <div class="flex-1 overflow-y-auto divide-y divide-border/50 custom-scrollbar" id="cl-components-list">
+              <!-- Rendered dynamically by script -->
+            </div>
+          </div>
+
+          <!-- Right Panel: Live Sandbox + Code Viewer -->
+          <div class="col-span-12 md:col-span-8 flex flex-col justify-between min-h-[620px] bg-surface dark:bg-black/60">
+            
+            <!-- Top: Live Interactive Canvas -->
+            <div class="flex-1 flex flex-col p-4 sm:p-8 relative overflow-hidden items-stretch justify-between min-h-[380px]">
+              <!-- Subtle Grid Pattern -->
+              <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none storybook-grid-bg"></div>
+
+              <!-- Canvas Status & Viewport Bar -->
+              <div class="flex justify-between items-center z-10 select-none pb-2 border-b border-border/60 gap-2 flex-wrap">
+                <div class="flex items-center gap-2">
+                  <span class="text-[9px] font-mono text-muted uppercase tracking-widest font-bold">Live Canvas</span>
+                </div>
+                <div class="text-xs font-mono font-bold truncate max-w-[280px] sm:max-w-md" id="cl-active-title">
+                  1. Minimal Hero Slider
+                </div>
+                <!-- Viewport switcher buttons -->
+                <div class="flex items-center gap-1 text-[10px] font-mono">
+                  <button
+                    type="button"
+                    class="viewport-btn px-2 py-0.5 border border-ink dark:border-white bg-ink text-paper dark:bg-white dark:text-black font-bold cursor-pointer"
+                    data-width="100%"
+                    title="Full Width"
+                  >
+                    100%
+                  </button>
+                  <button
+                    type="button"
+                    class="viewport-btn px-2 py-0.5 border border-border text-muted hover:text-ink hover:border-ink cursor-pointer"
+                    data-width="768px"
+                    title="Tablet (768px)"
+                  >
+                    Tablet
+                  </button>
+                  <button
+                    type="button"
+                    class="viewport-btn px-2 py-0.5 border border-border text-muted hover:text-ink hover:border-ink cursor-pointer"
+                    data-width="375px"
+                    title="Mobile (375px)"
+                  >
+                    Mobile
+                  </button>
+                </div>
+              </div>
+
+              <!-- Live Component Render Box -->
+              <div class="flex-1 flex items-center justify-center p-2 sm:p-6 z-10 transition-all w-full overflow-x-auto my-2" id="cl-preview-wrapper">
+                <div class="w-full flex items-center justify-center transition-all duration-300 mx-auto" id="cl-live-preview">
+                  <!-- Injected dynamically -->
+                </div>
+              </div>
+
+              <!-- Canvas Footer Note -->
+              <div class="text-[10px] text-muted font-mono flex items-center justify-between z-10 border-t border-border pt-2.5 select-none">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  <span>Pure Semantic HTML & Tailwind CSS · Isolated Vanilla JS DOM Scope</span>
+                </div>
+                <span class="text-[9px] text-emerald-600 dark:text-emerald-400 uppercase tracking-widest font-bold">● Active Sandbox</span>
+              </div>
+            </div>
+
+            <!-- Bottom: Code Panel -->
+            <div class="border-t border-border bg-zinc-50/90 dark:bg-black/80 p-4 sm:p-5 flex flex-col transition-all duration-300 ease-in-out h-[360px]" id="cl-code-panel">
+              <div class="flex flex-wrap justify-between items-center gap-2 mb-2.5 select-none">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                  <span class="text-[10px] font-mono font-bold uppercase tracking-widest">Component Source</span>
+                  <span class="text-[9px] font-mono text-muted" id="cl-code-lines"></span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button
+                    type="button"
+                    class="text-[10px] font-mono text-muted hover:text-ink border border-border bg-transparent px-2.5 py-1 hover:bg-black/5 dark:hover:bg-white/10 transition-all cursor-pointer uppercase tracking-wider flex items-center gap-1.5"
+                    id="cl-expand-btn"
+                  >
+                    <span id="cl-expand-icon">⤢</span>
+                    <span id="cl-expand-label">Expand Code ↗</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="text-[10px] font-mono text-ink border border-border bg-paper dark:bg-zinc-900 px-3 py-1 hover:border-ink dark:hover:border-white transition-all cursor-pointer uppercase tracking-wider font-bold shadow-xs flex items-center gap-1.5"
+                    id="cl-copy-btn"
+                  >
+                    <span>Copy Code</span>
+                  </button>
+                </div>
+              </div>
+              <div class="relative flex-1 overflow-hidden border border-border bg-[#09090b] dark:bg-[#070709]">
+                <pre class="h-full w-full p-4 overflow-x-auto overflow-y-auto custom-scrollbar text-[11px] leading-relaxed font-mono select-text m-0 whitespace-pre" id="cl-code-pre"><code id="cl-code-block" class="text-zinc-300"></code></pre>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Quick Copy-Paste & Usage Instructions -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 text-xs font-mono">
+        <div class="border border-border p-4 bg-surface dark:bg-black/40 space-y-2">
+          <div class="text-[10px] uppercase font-bold text-muted">01. Copy & Paste</div>
+          <h3 class="text-sm font-bold text-ink">Zero Package Lock-in</h3>
+          <p class="text-muted leading-relaxed text-[11px]">
+            No npm package needed. Copy HTML & classes directly into React, Vue, Astro, Svelte, Django, Laravel or plain HTML.
+          </p>
+        </div>
+        <div class="border border-border p-4 bg-surface dark:bg-black/40 space-y-2">
+          <div class="text-[10px] uppercase font-bold text-muted">02. Design Tokens</div>
+          <h3 class="text-sm font-bold text-ink">Strict CSS Variables</h3>
+          <p class="text-muted leading-relaxed text-[11px]">
+            Pre-wired with <code class="text-ink">--color-surface</code>, <code class="text-ink">--color-border</code>, and <code class="text-ink">--color-ink</code> tokens for instant dark/light theme switching.
+          </p>
+        </div>
+        <div class="border border-border p-4 bg-surface dark:bg-black/40 space-y-2">
+          <div class="text-[10px] uppercase font-bold text-muted">03. Accessible & Tested</div>
+          <h3 class="text-sm font-bold text-ink">WCAG 2.1 AA Compliant</h3>
+          <p class="text-muted leading-relaxed text-[11px]">
+            Full keyboard navigation, ARIA roles, roving tabindex patterns, and focus containment primitives.
+          </p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Global App Entry -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

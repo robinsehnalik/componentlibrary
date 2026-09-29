@@ -1,0 +1,52 @@
+<div class="w-full max-w-lg border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-5 text-left font-mono select-none space-y-3" id="microblog-root">
+              <!-- Author Header -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-emerald-500 to-cyan-500 flex items-center justify-center font-bold text-xs text-black shadow-sm">
+                    SYS
+                  </div>
+                  <div>
+                    <div class="flex items-center gap-1.5">
+                      <span class="font-bold text-xs text-ink dark:text-white">System Architecture Core</span>
+                      <span class="text-emerald-500 text-xs" title="Verified System">✓</span>
+                    </div>
+                    <div class="text-[10px] text-muted">@designsystems_io · 2h ago</div>
+                  </div>
+                </div>
+                <span class="text-[10px] px-2 py-0.5 border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold">PRODUCTION TELEMETRY</span>
+              </div>
+
+              <!-- Post Body -->
+              <p class="text-xs text-ink dark:text-zinc-200 font-sans leading-relaxed m-0">
+                We eliminated 180KB of clientside runtime hydration by switching to isolated CSS design tokens. Result: sub-20ms interaction response, zero CLS shifts, and 100/100 Core Web Vitals across every viewport.
+              </p>
+
+              <!-- Attached Telemetry Pill -->
+              <div class="p-2.5 bg-zinc-50 dark:bg-black/50 border border-[color:var(--color-border)] flex items-center justify-between text-[10px] text-muted">
+                <span>⚡ TTFB: <strong>14ms</strong></span>
+                <span>🛡️ CSP: <strong>Strict</strong></span>
+                <span>📦 Bundle: <strong>0 KB JS</strong></span>
+                <span class="text-emerald-500 font-bold">100/100 OK</span>
+              </div>
+
+              <!-- Interactive Actions Bar -->
+              <div class="flex items-center justify-between text-[11px] text-muted border-t border-[color:var(--color-border)]/60 pt-2.5">
+                <div class="flex gap-4">
+                  <button id="mb-reply" class="hover:text-ink dark:hover:text-white flex items-center gap-1 cursor-pointer">
+                    💬 <span id="mb-reply-count">14</span>
+                  </button>
+                  <button id="mb-repost" class="hover:text-emerald-500 flex items-center gap-1 cursor-pointer">
+                    🔁 <span id="mb-repost-count">48</span>
+                  </button>
+                  <button id="mb-like" class="hover:text-red-500 flex items-center gap-1 cursor-pointer">
+                    ♥ <span id="mb-like-count">182</span>
+                  </button>
+                  <button id="mb-save" class="hover:text-amber-400 flex items-center gap-1 cursor-pointer">
+                    🔖 <span id="mb-save-count">64</span>
+                  </button>
+                </div>
+                <button id="mb-share" class="hover:text-ink dark:hover:text-white cursor-pointer text-[10px]">
+                  ↗ <span id="mb-share-text">Share</span>
+                </button>
+              </div>
+            </div>

@@ -1,0 +1,18 @@
+<div class="w-full max-w-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-5 text-left font-mono select-none text-xs space-y-3">
+              <div class="flex justify-between items-center border-b border-[color:var(--color-border)] pb-2">
+                <span class="font-bold text-ink dark:text-white uppercase text-[10px]">Submit Component Rating</span>
+                <div class="text-amber-400 text-base cursor-pointer flex gap-1" id="inp-stars">
+                  <span data-star="1">★</span><span data-star="2">★</span><span data-star="3">★</span><span data-star="4">★</span><span data-star="5">★</span>
+                </div>
+              </div>
+              <div class="flex gap-2">
+                <input type="text" id="inp-text" placeholder="Add architectural review notes..." class="flex-1 border border-[color:var(--color-border)] bg-zinc-50 dark:bg-black/50 px-3 py-1.5 text-xs outline-none focus:border-ink dark:focus:border-white" />
+                <button id="inp-submit" class="px-4 py-1.5 bg-ink text-paper dark:bg-white dark:text-black font-bold uppercase text-[10px] cursor-pointer">Submit</button>
+              </div>
+              <div id="inp-feedback-list" class="space-y-1.5 pt-2 border-t border-[color:var(--color-border)]/60 text-[11px] text-muted">
+                <div class="flex justify-between items-center text-ink dark:text-white">
+                  <span>“Sub-20ms TTFB across edge nodes is remarkable.”</span>
+                  <span class="text-amber-400 font-bold">★★★★★</span>
+                </div>
+              </div>
+            </div>

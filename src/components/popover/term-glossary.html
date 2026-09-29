@@ -1,0 +1,13 @@
+<div class="w-full max-w-sm border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-4 text-left font-mono select-none text-xs space-y-3">
+              <div class="flex gap-2 border-b border-[color:var(--color-border)] pb-2" id="gloss-tabs">
+                <button class="font-bold text-ink dark:text-white underline cursor-pointer" data-term="ttfb">TTFB</button>
+                <button class="text-muted hover:text-ink cursor-pointer" data-term="fcp">FCP</button>
+                <button class="text-muted hover:text-ink cursor-pointer" data-term="cls">CLS</button>
+              </div>
+              <div id="gloss-content" class="space-y-1">
+                <div class="font-bold text-ink dark:text-white flex items-center gap-1.5">
+                  <span>📖 TTFB</span> <span class="text-[10px] text-muted">(Time to First Byte)</span>
+                </div>
+                <p class="text-[11px] text-muted leading-relaxed m-0">The duration from client HTTP request dispatch to the initial packet arrival from edge cache.</p>
+              </div>
+            </div>

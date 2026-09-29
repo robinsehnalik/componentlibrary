@@ -1,0 +1,37 @@
+{
+  "name": "componentlibrary",
+  "version": "1.0.0",
+  "description": "Zero-dependency, copy-paste UI component collection built with Semantic HTML, Tailwind CSS, and minimal vanilla JavaScript.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,js,html,css,json}\" \"*.{json,js,ts,html,md}\""
+  },
+  "keywords": [
+    "ui",
+    "components",
+    "tailwind",
+    "tailwindcss",
+    "vanilla-js",
+    "semantic-html",
+    "zero-runtime",
+    "copy-paste",
+    "design-system",
+    "wcag",
+    "accessible"
+  ],
+  "author": "Robin Sehnalik",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7"
+  }
+}

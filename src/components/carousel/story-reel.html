@@ -1,0 +1,22 @@
+<div class="w-full max-w-md border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-5 font-mono select-none space-y-4 text-left cursor-grab active:cursor-grabbing relative" id="cs4-drag-area">
+              <div class="grid grid-cols-3 gap-1.5 cursor-pointer" id="cs4-bars">
+                <div class="h-1 bg-ink dark:bg-white transition-all rounded-full" data-step="0"></div>
+                <div class="h-1 bg-zinc-200 dark:bg-zinc-800 transition-all rounded-full" data-step="1"></div>
+                <div class="h-1 bg-zinc-200 dark:bg-zinc-800 transition-all rounded-full" data-step="2"></div>
+              </div>
+              <div class="space-y-2 min-h-[90px]" id="cs4-content">
+                <div class="flex items-center justify-between text-[9px] uppercase tracking-widest text-muted">
+                  <span id="cs4-step-tag">Step 01 / Strategy</span>
+                  <span class="text-[9px] text-emerald-600 dark:text-emerald-400 font-bold">Swipe / Drag ⇄</span>
+                </div>
+                <h4 class="text-sm font-bold text-ink dark:text-white m-0" id="cs4-title">Modular Component Architecture</h4>
+                <p class="text-xs text-muted leading-relaxed m-0" id="cs4-desc">Every element is atomic, independent, and strictly typed with isolated DOM scopes.</p>
+              </div>
+              <div class="flex items-center justify-between pt-3 border-t border-[color:var(--color-border)] text-xs">
+                <span class="text-[10px] text-muted">Drag card or click arrows</span>
+                <div class="flex gap-1.5">
+                  <button id="cs4-prev-btn" class="px-2.5 py-1 border border-[color:var(--color-border)] hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer">‹ Prev</button>
+                  <button id="cs4-next-btn" class="px-2.5 py-1 border border-[color:var(--color-border)] hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer">Next ›</button>
+                </div>
+              </div>
+            </div>

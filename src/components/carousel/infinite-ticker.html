@@ -1,0 +1,45 @@
+<div class="w-full max-w-lg border border-[color:var(--color-border)] bg-[color:var(--color-surface)] dark:bg-[#09090b] p-5 font-mono select-none space-y-3 text-left">
+              <div class="flex justify-between items-center text-[10px] border-b border-[color:var(--color-border)]/60 pb-2.5">
+                <span class="text-muted uppercase tracking-wider">Live Edge Telemetry Stream</span>
+                <div class="flex items-center gap-1.5">
+                  <button id="cs9-toggle" class="px-2 py-0.5 border border-emerald-500/40 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold cursor-pointer">● ACTIVE</button>
+                  <button id="cs9-shift-left" class="px-2 py-0.5 border border-[color:var(--color-border)] hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer">‹</button>
+                  <button id="cs9-shift-right" class="px-2 py-0.5 border border-[color:var(--color-border)] hover:bg-black/5 dark:hover:bg-white/10 cursor-pointer">›</button>
+                </div>
+              </div>
+
+              <!-- Marquee Track -->
+              <div class="relative overflow-hidden border border-[color:var(--color-border)] bg-zinc-50 dark:bg-black/40 py-3 px-2">
+                <div class="flex items-center gap-3 transition-transform duration-300 ease-out" id="cs9-track" style="transform: translateX(0px);">
+                  <div class="px-3 py-1.5 border border-[color:var(--color-border)] bg-zinc-100 dark:bg-black/60 shrink-0 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-ink dark:text-white font-bold text-[11px]">PRG-01</span>
+                    <span class="text-[10px] text-muted">14ms</span>
+                  </div>
+                  <div class="px-3 py-1.5 border border-[color:var(--color-border)] bg-zinc-100 dark:bg-black/60 shrink-0 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-ink dark:text-white font-bold text-[11px]">FRA-02</span>
+                    <span class="text-[10px] text-muted">18ms</span>
+                  </div>
+                  <div class="px-3 py-1.5 border border-[color:var(--color-border)] bg-zinc-100 dark:bg-black/60 shrink-0 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-ink dark:text-white font-bold text-[11px]">WAW-01</span>
+                    <span class="text-[10px] text-muted">12ms</span>
+                  </div>
+                  <div class="px-3 py-1.5 border border-[color:var(--color-border)] bg-zinc-100 dark:bg-black/60 shrink-0 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-ink dark:text-white font-bold text-[11px]">AMS-03</span>
+                    <span class="text-[10px] text-muted">16ms</span>
+                  </div>
+                  <div class="px-3 py-1.5 border border-[color:var(--color-border)] bg-zinc-100 dark:bg-black/60 shrink-0 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-ink dark:text-white font-bold text-[11px]">LON-01</span>
+                    <span class="text-[10px] text-muted">20ms</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center text-[9px] text-muted">
+                <span>99.99% Global Uptime</span>
+                <span id="cs9-status-text">Streaming telemetry</span>
+              </div>
+            </div>

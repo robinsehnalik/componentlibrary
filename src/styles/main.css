@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-paper: #ffffff;
+    --color-surface: #fafafa;
+    --color-border: #e4e4e7;
+    --color-ink: #09090b;
+    --color-muted: #71717a;
+  }
+
+  .dark {
+    --color-paper: #09090b;
+    --color-surface: #121215;
+    --color-border: #27272a;
+    --color-ink: #f4f4f5;
+    --color-muted: #a1a1aa;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom Scrollbars */
+.custom-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* Subtle Grid Background */
+.storybook-grid-bg {
+  background-image: radial-gradient(var(--color-ink) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Syntax Highlighting Tokens in Code Panel */
+.syntax-tag { color: #f43f5e; font-weight: 600; }
+.syntax-attr { color: #38bdf8; }
+.syntax-val { color: #a3e635; }
+.syntax-comment { color: #71717a; font-style: italic; }
+.syntax-string { color: #fbbf24; }
+.syntax-keyword { color: #c084fc; font-weight: 600; }

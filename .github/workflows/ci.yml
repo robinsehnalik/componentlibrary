@@ -1,0 +1,58 @@
+name: CI Verification
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Token Validation, APG Contracts & Bundle Budget
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    strategy:
+      matrix:
+        node-version: [20.x, 22.x]
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: ⚡ Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: 📥 Install Dependencies
+        run: pnpm install
+
+      - name: 🔍 TypeScript Strict Typecheck & Lint
+        run: pnpm run typecheck
+
+      - name: 🎨 Build W3C DTCG Design Tokens (Style Dictionary v4)
+        run: pnpm run build:tokens
+
+      - name: 🏗️ Bundle Headless Primitives & Components (tsup)
+        run: pnpm run build:lib
+
+      - name: 🧪 Execute Invariant & Contract Tests (Vitest & Axe-Core)
+        run: pnpm test
+
+      - name: 📏 Enforce Bundle Size Budgets (< 1.8KB gzipped)
+        run: pnpm run size-limit
